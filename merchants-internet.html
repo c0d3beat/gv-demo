@@ -23,7 +23,7 @@
         background: #F0F0F0;
       }
       .pusher {
-        padding-top: 50px;
+        padding-top: 170px;
         padding-bottom: 75px;
       }
       .ui.grid {
@@ -31,6 +31,16 @@
       }
       .column {
         padding-right: 0 !important;
+      }
+      .row.merchant {
+        margin-top: -25px;
+      }
+      .top.fixed.secondary.pointing.menu {
+        margin-top: 48px;
+        background: #F0F0F0;
+      }
+      .ui.secondary.pointing.menu .active.item {
+        border-color: #2185D0;
       }
     </style>
     <!-- CSS - END -->
@@ -66,51 +76,51 @@
       <div class="three wide right floated column">
       </div>
     </div>
+    <div class="ui top fixed fluid four item labeled icon secondary pointing menu">
+      <a href="merchants-game.html" class="item">
+        <i class="circular inverted blue gamepad icon"></i>
+        <span>Game</span>
+      </a>
+      <a href="merchants-internet.html" class="active item">
+        <i class="circular inverted teal signal icon"></i>
+        <span>Internet</span>
+      </a>
+      <a href="merchants-ecomm.html" class="item">
+        <i class="circular inverted orange payment card icon"></i>
+        <span>E-commerce</span>
+      </a>
+      <a href="merchants-tv.html" class="item">
+        <i class="circular inverted pink tv icon"></i>
+        <span>TV Berbayar</span>
+      </a>
+    </div>
 
     <!-- Page Content -->
     <div class="pusher">
       <div class="ui grid">
-        <div class="row">
+        <div class="row merchant">
           <div class="sixteen wide column">
             <div class="ui clearing segment">
               <div class="ui container">
-                <table class="ui very basic celled unstackable table">
-                  <tbody>
-                  <tr>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/mycard.png" alt="" class="ui fluid image"></a>
-                    </td>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/listrik-pintar.jpeg" alt="" class="ui fluid image"></a>
-                    </td>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/bolt.jpeg" alt="" class="ui fluid image"></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/dot.jpeg" alt="" class="ui fluid image"></a>
-                    </td>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/pulsa.png" alt="" class="ui fluid image"></a>
-                    </td>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/playmail.png" alt="" class="ui fluid image"></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/playmail.png" alt="" class="ui fluid image"></a>
-                    </td>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/koramgame.jpeg" alt="" class="ui fluid image"></a>
-                    </td>
-                    <td>
-                      <a href=""><img src="assets/img/merchant/ebay.jpeg" alt="" class="ui fluid image"></a>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
+                <div class="ui divided unstackable items">
+                  <div class="item">
+                    <div class="ui image">
+                      <img src="assets/img/merchant/internet/bolt.jpeg" alt="">
+                    </div>
+                    <div class="middle aligned content">
+                      <div class="header">
+                        Bolt Internet
+                      </div>
+                      <div class="extra">
+                        <a href="purchase-bolt.html" class="ui right floated primary tiny button">
+                          Beli
+                          <i class="right chevron icon"></i>
+                        </a>
+                        <div class="ui teal label">langsung</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
