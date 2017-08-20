@@ -1,0 +1,209 @@
+<!-- Content -->
+<div class="ui grid">
+  <div class="row">
+    <div class="ui fluid four item labeled icon secondary pointing menu">
+      <a href="#merchant-game" class="item">
+        <i class="circular inverted blue gamepad icon"></i>
+        <span>Game</span>
+      </a>
+      <a href="#merchant-internet" class="item">
+        <i class="circular inverted teal signal icon"></i>
+        <span>Internet</span>
+      </a>
+      <a href="#merchant-ecomm" class="active item">
+        <i class="circular inverted orange payment card icon"></i>
+        <span>E-commerce</span>
+      </a>
+      <a href="#merchant-tv" class="item">
+        <i class="circular inverted pink tv icon"></i>
+        <span>TV Berbayar</span>
+      </a>
+    </div>
+  </div>
+  <div class="animated merchant row">
+    <div class="ui clearing segment">
+      <div class="ui container">
+        <div class="ui divided unstackable items">
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/cherrycredits.png" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Cherry Credits
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny button">
+                  Beli
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui teal label">langsung</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/ebay.jpeg" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                eBay Gift Card
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny button">
+                  Beli
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui teal label">langsung</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/gudanggaming.png" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Gudang Gaming Store
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny disabled button">
+                  Beli
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui red label">habis</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/molpoints.jpg" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                MOLPoints
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny button">
+                  Beli
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui teal label">langsung</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/nexpay.png" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                NexPay
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny button">
+                  Beli
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui teal label">langsung</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/paymentwall.png" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Paymentwall
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny button">
+                  Petunjuk
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui yellow label">via web</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/pulsa.png" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Pulsa Ponsel Prabayar
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny button">
+                  Beli
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui teal label">langsung</div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/ecomm/listrik-pintar.jpeg" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                Token Listrik Prabayar
+              </div>
+              <div class="extra">
+                <a href="" class="ui right floated primary tiny button">
+                  Beli
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui teal label">langsung</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Controller -->
+<script>
+  app.page("merchant-ecomm", function() {
+    <!-- Set navbar title -->
+    $("#nav, #title, #toggle").html("");
+    $("#title").html(
+            '<div class="ui center aligned grid">' +
+            '<div class="item">' +
+            '<h3>Merchants</h3>' +
+            '</div>' +
+            '</div>'
+    );
+    $("#nav").html(
+            '<div class="vertically fitted item">' +
+            '<a href="#dashboard">'+
+            '<i class="large arrow left icon"></i>' +
+            '</a>' +
+            '</div>'
+    );
+
+    $("section#merchant-ecomm").on("page.shown", function() {
+      $("section#merchant-ecomm > .ui.grid > .row").addClass("fadeIn");
+      $("section#merchant-ecomm div.extra > div.ui.yellow").each(function() {
+        $(this).siblings("a").on("click", function(e) {
+          if ($(this).attr("href") !== "#purchase-8ternals") {
+            e.preventDefault();
+            alert("Untuk template pembelian melalui web, silahkan merujuk ke contoh 8ternals.");
+          }
+        });
+      });
+      $("section#merchant-ecomm div.extra > div.ui.teal").each(function() {
+        $(this).siblings("a").on("click", function(e) {
+          if ($(this).attr("href") !== "#purchase-itunes") {
+            e.preventDefault();
+            alert("Untuk template pembelian langsung, silahkan merujuk ke contoh itunes.");
+          }
+        });
+      });
+    });
+  });
+</script>

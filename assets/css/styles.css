@@ -1,0 +1,227 @@
+/* common CSS */
+body,
+body.pushable > .pusher {
+  background: #F0F0F0;
+}
+body > section {
+  display: none;
+}
+.pusher {
+  padding-top: 50px;
+  padding-bottom: 105px;
+}
+.ui.menu {
+  border-radius: 0 !important;
+}
+.ui.segment {
+  border-radius: 0 !important;
+}
+.ui.floating.label {
+  top: 1em;
+  margin: 0em 0em 0em -3em !important;
+}
+.ui.bottom.menu > .item {
+  color: #7c7c7c;
+}
+.ui.bottom.menu > .active.item {
+  color: #2185D0;
+}
+.ui.bottom.menu > .item:hover {
+  color: #2185D0;
+}
+.ui.bottom.fixed.menu span {
+  font-size: 12px;
+}
+
+/* dashboard.html css */
+body.dashboard > section#dashboard {
+  display: block;
+}
+body.dashboard > section#dashboard #glide {
+  margin-top:-15px;
+}
+body.dashboard > section#dashboard .glide__bullets > *.active {
+  background-color: #2185D0;
+}
+body.dashboard > section#dashboard .glide--horizontal .glide__bullets {
+  bottom: 10%;
+}
+body.dashboard > section#dashboard .glide__actions {
+  position: absolute;
+}
+body.dashboard > section#dashboard .glide__actions {
+  bottom: 15%;
+  width: 90px;
+  right: 0%;
+}
+body.dashboard > section#dashboard .glide__action {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font: 9px Arial, sans-serif;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease, border 300ms ease-in-out;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  cursor: pointer;
+}
+body.dashboard > section#dashboard .glide__action:hover {
+  color: white;
+}
+body.dashboard > section#dashboard .row:nth-child(2) {
+  margin-top: -45px;
+}
+body.dashboard > section#dashboard .ui.segment a.see.all {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+body.dashboard > section#dashboard .ui.top.attached.menu span,
+body.dashboard > section#dashboard .ui.bottom.attached.menu span {
+  font-size: 10px;
+  color: #000;
+}
+
+/* order.html css */
+body.order > section#order {
+  display: block;
+}
+body.order > section#order .ui.three.item.labeled.icon.menu span {
+  font-size: 10px;
+}
+body.order > section#order .ui.secondary.pointing.menu .active.item {
+  border-color: #2185D0;
+}
+
+/* topup.html css */
+body.topup > section#topup {
+  display: block;
+}
+body.topup > section#topup .ui.three.item.labeled.icon.menu span {
+  font-size: 10px;
+}
+body.topup > section#topup .ui.secondary.pointing.menu .active.item {
+  border-color: #2185D0;
+}
+
+/* voucher.html css */
+body.voucher > section#voucher {
+  display: block;
+}
+body.voucher > section#voucher .ui.three.item.labeled.icon.menu span {
+  font-size: 10px;
+}
+body.voucher > section#voucher .ui.secondary.pointing.menu .active.item {
+  border-color: #2185D0;
+}
+
+/* notification.html css */
+body.notification > section#notification {
+  display: block;
+}
+body.notification > section#notification .ui.segment.new {
+  background: #EAECEE;
+}
+
+/* account.html css */
+body.account > section#account {
+  display: block;
+}
+body.account > section#account .ui.raised.card {
+  background-image: url("../img/card.jpeg");
+  background-size: cover;
+  background-color: #56595E;
+  border-radius: 15px;
+  padding: 15px;
+}
+body.account > section#account .ui.raised.card .content .header,
+body.account > section#account .ui.raised.card .content .description {
+  color: #FFFFFF;
+}
+body.account > section#account .ui.raised.card .content .meta {
+  color: #F0F0F0;
+}
+body.account > section#account .ui.raised.card .content .row {
+  padding-top: 70px;
+}
+body.account > section#account .ui.raised.card .content .row a {
+  color: #FFFFFF;
+}
+body.account > section#account.pusher {
+  padding-top: 75px !important;
+}
+
+/* merchant-game.html css */
+body.merchant-game > section#merchant-game {
+  display: block;
+}
+body.merchant-game > section#merchant-game.pusher {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+body.merchant-game > section#merchant-game .merchant.row {
+  margin-top: -25px;
+}
+body.merchant-game > section#merchant-game .secondary.pointing.menu {
+  background: #F0F0F0;
+}
+body.merchant-game > section#merchant-game .ui.secondary.pointing.menu .active.item {
+  border-color: #2185D0;
+}
+
+/* merchant-internet.html css */
+body.merchant-internet > section#merchant-internet {
+  display: block;
+}
+body.merchant-internet > section#merchant-internet.pusher {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+body.merchant-internet > section#merchant-internet .merchant.row {
+  margin-top: -25px;
+}
+body.merchant-internet > section#merchant-internet .secondary.pointing.menu {
+  background: #F0F0F0;
+}
+body.merchant-internet > section#merchant-internet .ui.secondary.pointing.menu .active.item {
+  border-color: #2185D0;
+}
+
+/* merchant-ecomm.html css */
+body.merchant-ecomm > section#merchant-ecomm {
+  display: block;
+}
+body.merchant-ecomm > section#merchant-ecomm.pusher {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+body.merchant-ecomm > section#merchant-ecomm .merchant.row {
+  margin-top: -25px;
+}
+body.merchant-ecomm > section#merchant-ecomm .secondary.pointing.menu {
+  background: #F0F0F0;
+}
+body.merchant-ecomm > section#merchant-ecomm .ui.secondary.pointing.menu .active.item {
+  border-color: #2185D0;
+}
+
+/* merchant-tv.html css */
+body.merchant-tv > section#merchant-tv {
+  display: block;
+}
+body.merchant-tv > section#merchant-tv.pusher {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+body.merchant-tv > section#merchant-tv .merchant.row {
+  margin-top: -25px;
+}
+body.merchant-tv > section#merchant-tv .secondary.pointing.menu {
+  background: #F0F0F0;
+}
+body.merchant-tv > section#merchant-tv .ui.secondary.pointing.menu .active.item {
+  border-color: #2185D0;
+}

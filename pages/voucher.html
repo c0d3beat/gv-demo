@@ -1,0 +1,91 @@
+<!-- Content -->
+<div class="ui grid">
+  <div class="row">
+    <div class="ui fluid three item labeled icon secondary pointing menu">
+      <a href="#order" class="item">
+        <i class="circular inverted blue shop icon"></i>
+        <span>Pembelian</span>
+      </a>
+      <a href="#topup" class="item">
+        <i class="circular inverted grey toggle up icon"></i>
+        <span>Top Up</span>
+      </a>
+      <a href="#voucher" class="active item">
+        <i class="circular inverted teal qrcode icon"></i>
+        <span>Voucher</span>
+      </a>
+    </div>
+  </div>
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui segment">
+        <h3 class="ui header">
+          <i class="teal folder open outline icon"></i>
+          <div class="content">
+            Belum ada proses
+            <div class="sub header">
+              Seluruh proses aktif Anda akan ditampilkan disini.
+            </div>
+          </div>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="ui divider"></div>
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui fluid vertical menu">
+        <a href="voucher-history.html" class="item">
+          Histori voucher belanja
+          <i class="angle right icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Menu -->
+<div class="ui bottom fixed large four item labeled icon animated menu">
+  <a href="#dashboard" class="item">
+    <i class="home icon"></i>
+    <span>Awal</span>
+  </a>
+  <a href="#order" class="active item">
+    <i class="history icon"></i>
+    <span>Histori</span>
+  </a>
+  <a href="#notification" class="item">
+    <i class="alarm outline icon"></i>
+    <span>Notifikasi</span>
+    <div class="ui floating red label">1</div>
+  </a>
+  <a href="#account" class="item">
+    <i class="address card outline icon"></i>
+    <span>Akun saya</span>
+  </a>
+</div>
+
+<!-- Controller -->
+<script>
+  app.page("voucher", function() {
+    <!-- Set navbar title -->
+    $("#nav, #title, #toggle").html("");
+    $("#title").html(
+            '<div class="fitted item">' +
+            '<img class="ui fluid image" src="assets/img/gve.png" alt="">' +
+            '</div>'
+    );
+    $("#toggle").html(
+            '<a class="toggler vertically fitted item">' +
+            '<i class="large sidebar icon"></i>'+
+            '</a>'
+    );
+
+    $("section#voucher").on("page.shown", function() {
+      $("#nav, #title, #toggle").addClass("fadeIn");
+      $("section#voucher > .ui.grid > .row").addClass("fadeIn");
+      $("section#voucher > .ui.grid > .ui.divider").addClass("fadeIn");
+    });
+    $(".ui.right.sidebar").sidebar("attach events", "#toggle");
+  });
+</script>

@@ -1,0 +1,126 @@
+<!-- Content -->
+<div class="ui grid">
+  <div class="row">
+    <div class="ui fluid three item labeled icon secondary pointing menu">
+      <a href="#order" class="active item">
+        <i class="circular inverted blue shop icon"></i>
+        <span>Pembelian</span>
+      </a>
+      <a href="#topup" class="item">
+        <i class="circular inverted grey toggle up icon"></i>
+        <span>Top Up</span>
+      </a>
+      <a href="#voucher" class="item">
+        <i class="circular inverted teal qrcode icon"></i>
+        <span>Voucher</span>
+      </a>
+    </div>
+  </div>
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui fluid vertical menu">
+        <a href="checkout.html" class="item">
+          <div class="ui middle aligned grid">
+            <div class="stretched row">
+              <div class="fourteen wide column">
+                <h4 class="ui header">
+                  <div class="content">
+                    iTunes Gift Card $10
+                    <div class="sub header">
+                      3 menit yang lalu
+                    </div>
+                  </div>
+                  <div class="description">
+                    Rp. 140.000
+                  </div>
+                </h4>
+              </div>
+              <div class="two wide left aligned column">
+                <i class="angle right icon"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="" class="item">
+          <div class="ui middle aligned grid">
+            <div class="stretched row">
+              <div class="fourteen wide column">
+                <h4 class="ui header">
+                  <div class="content">
+                    Nintendo eShop $20
+                    <div class="sub header">
+                      2 jam yang lalu
+                    </div>
+                  </div>
+                  <div class="description">
+                    Rp. 285.000
+                  </div>
+                </h4>
+              </div>
+              <div class="two wide left aligned column">
+                <i class="angle right icon"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="ui divider"></div>
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui fluid vertical menu">
+        <a href="order-history.html" class="item">
+          Histori pembelian
+          <i class="angle right icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Menu -->
+<div class="ui bottom fixed large four item labeled icon animated menu">
+  <a href="#dashboard" class="item">
+    <i class="home icon"></i>
+    <span>Awal</span>
+  </a>
+  <a href="#order" class="active item">
+    <i class="history icon"></i>
+    <span>Histori</span>
+  </a>
+  <a href="#notification" class="item">
+    <i class="alarm outline icon"></i>
+    <span>Notifikasi</span>
+    <div class="ui floating red label">1</div>
+  </a>
+  <a href="#account" class="item">
+    <i class="address card outline icon"></i>
+    <span>Akun saya</span>
+  </a>
+</div>
+
+<!-- Controller -->
+<script>
+  app.page("order", function() {
+    <!-- Set navbar title -->
+    $("#nav, #title, #toggle").html("");
+    $("#title").html(
+            '<div class="fitted item">' +
+            '<img class="ui fluid image" src="assets/img/gve.png" alt="">' +
+            '</div>'
+    );
+    $("#toggle").html(
+            '<a class="toggler vertically fitted item">' +
+            '<i class="large sidebar icon"></i>'+
+            '</a>'
+    );
+
+    $("section#order").on("page.shown", function() {
+      $("#nav, #title, #toggle").addClass("fadeIn");
+      $("section#order > .ui.grid > .row").addClass("fadeIn");
+      $("section#order > .ui.grid > .ui.divider").addClass("fadeIn");
+    });
+    $(".ui.right.sidebar").sidebar("attach events", "#toggle");
+  });
+</script>

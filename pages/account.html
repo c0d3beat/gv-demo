@@ -1,0 +1,141 @@
+<!-- Content -->
+<div class="ui grid">
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui container">
+        <div class="ui fluid raised card">
+          <div class="content">
+            <div class="header">GudangVoucher</div>
+            <div class="meta">Basic</div>
+            <div class="description">
+              <div class="row">
+                      <span class="right floated">
+                        <a href="edit-account.html"><i class="big pencil icon"></i></a>
+                      </span>
+                Wawan Gede Buwana<br>
+                +628551435950
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui container">
+        <h4 class="header">GVe-Money</h4>
+      </div>
+      <div class="ui fluid vertical menu">
+        <a href="" class="item">
+          <div class="ui middle aligned grid">
+            <div class="stretched row">
+              <div class="fourteen wide column">
+                <h4 class="ui header">
+                  <i class="grey payment icon"></i>
+                  <div class="content">
+                    Saldo: Rp. 102.728,-
+                    <div class="sub header">
+                      Lakukan Top Up untuk transaksi lebih banyak
+                    </div>
+                  </div>
+                </h4>
+              </div>
+              <div class="two wide left aligned column">
+                <i class="angle right icon"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui container">
+        <h4 class="header">Fitur Aplikasi</h4>
+      </div>
+      <div class="ui fluid vertical menu">
+        <a href="" class="item">
+          <div class="ui middle aligned grid">
+            <div class="stretched row">
+              <div class="fourteen wide column">
+                <h4 class="ui header">
+                  <i class="grey help circle outline icon"></i>
+                  <div class="content">
+                    Pusat Bantuan
+                    <div class="sub header">
+                      Temukan jawaban dari pertanyaan Anda
+                    </div>
+                  </div>
+                </h4>
+              </div>
+              <div class="two wide left aligned column">
+                <i class="angle right icon"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="animated row">
+    <div class="sixteen wide column">
+      <div class="ui fluid vertical menu">
+        <a href="" class="item">
+          <h4 class="ui header">
+            <i class="grey power icon"></i>
+            <div class="content">
+              Keluar
+            </div>
+          </h4>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Menu -->
+<div class="ui bottom fixed large four item labeled icon animated menu">
+  <a href="#dashboard" class="item">
+    <i class="home icon"></i>
+    <span>Awal</span>
+  </a>
+  <a href="#order" class="item">
+    <i class="history icon"></i>
+    <span>Histori</span>
+  </a>
+  <a href="#notification" class="item">
+    <i class="alarm outline icon"></i>
+    <span>Notifikasi</span>
+    <div class="ui floating red label">1</div>
+  </a>
+  <a href="#account" class="active item">
+    <i class="address card outline icon"></i>
+    <span>Akun saya</span>
+  </a>
+</div>
+
+<!-- Controller -->
+<script>
+  app.page("account", function() {
+    <!-- Set navbar title -->
+    $("#nav, #title, #toggle").html("");
+    $("#title").html(
+            '<div class="fitted item">' +
+            '<img class="ui fluid image" src="assets/img/gve.png" alt="">' +
+            '</div>'
+    );
+    $("#toggle").html(
+            '<a class="toggler vertically fitted item">' +
+            '<i class="large sidebar icon"></i>'+
+            '</a>'
+    );
+
+    $("section#account").on("page.shown", function() {
+      $("section#account > .ui.grid > .row").addClass("fadeIn");
+      $("section#account > .ui.grid > .ui.divider").addClass("fadeIn");
+    });
+    $(".ui.right.sidebar").sidebar("attach events", "#toggle");
+  });
+</script>

@@ -1,0 +1,74 @@
+<!-- Content -->
+<div class="ui grid">
+  <div class="row">
+    <div class="ui fluid four item labeled icon secondary pointing menu">
+      <a href="#merchant-game" class="item">
+        <i class="circular inverted blue gamepad icon"></i>
+        <span>Game</span>
+      </a>
+      <a href="#merchant-internet" class="active item">
+        <i class="circular inverted teal signal icon"></i>
+        <span>Internet</span>
+      </a>
+      <a href="#merchant-ecomm" class="item">
+        <i class="circular inverted orange payment card icon"></i>
+        <span>E-commerce</span>
+      </a>
+      <a href="#merchant-tv" class="item">
+        <i class="circular inverted pink tv icon"></i>
+        <span>TV Berbayar</span>
+      </a>
+    </div>
+  </div>
+  <div class="animated merchant row">
+    <div class="ui clearing segment">
+      <div class="ui container">
+        <div class="ui divided unstackable items">
+          <div class="item">
+            <div class="ui image">
+              <img src="assets/img/merchant/games/8ternals.jpg" alt="">
+            </div>
+            <div class="middle aligned content">
+              <div class="header">
+                8ternals
+              </div>
+              <div class="extra">
+                <a href="#purchase-8ternals" class="ui right floated primary mini button">
+                  Petunjuk
+                  <i class="right chevron icon"></i>
+                </a>
+                <div class="ui yellow label">via web</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Controller -->
+<script>
+  app.page("merchant-internet", function() {
+    <!-- Set navbar title -->
+    $("#nav, #title, #toggle").html("");
+    $("#title").html(
+            '<div class="ui center aligned grid">' +
+            '<div class="item">' +
+            '<h3>Merchants</h3>' +
+            '</div>' +
+            '</div>'
+    );
+    $("#nav").html(
+            '<div class="vertically fitted item">' +
+            '<a href="#dashboard">'+
+            '<i class="large arrow left icon"></i>' +
+            '</a>' +
+            '</div>'
+    );
+
+    $("section#merchant-internet").on("page.shown", function() {
+      $("section#merchant-internet > .ui.grid > .row").addClass("fadeIn");
+    });
+  });
+</script>
